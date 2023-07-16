@@ -12,6 +12,11 @@ Impliment Question Rewriting for Conversational Question Answering
 pip install -r requirements.txt
 ```
 
+Update submodules if it needs.
+```bash
+bash init.sh
+```
+
 ## Option 2: Install step-by-step
 
 ### Install Pytorch + CUDAToolkit
