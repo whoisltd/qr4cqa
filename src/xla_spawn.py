@@ -36,27 +36,24 @@ def parse_args():
     Helper function parsing the command line options
     @retval ArgumentParser
     """
-    parser = ArgumentParser(
-        description=(
-            "PyTorch TPU distributed training launch helper utility that will spawn up multiple distributed processes"
-        )
-    )
+    parser = ArgumentParser(description=(
+        "PyTorch TPU distributed training launch helper utility that will spawn up multiple distributed processes"
+    ))
 
     # Optional arguments for the launch helper
-    parser.add_argument(
-        "--num_cores", type=int, default=1, help="Number of TPU cores to use (1 or 8)."
-    )
+    parser.add_argument("--num_cores",
+                        type=int,
+                        default=1,
+                        help="Number of TPU cores to use (1 or 8).")
 
     # positional
     parser.add_argument(
         "training_script",
         type=str,
-        help=(
-            "The full path to the single TPU training "
-            "program/script to be launched in parallel, "
-            "followed by all the arguments for the "
-            "training script"
-        ),
+        help=("The full path to the single TPU training "
+              "program/script to be launched in parallel, "
+              "followed by all the arguments for the "
+              "training script"),
     )
 
     # rest from the training program
@@ -75,11 +72,8 @@ def main():
     mod = importlib.import_module(mod_name)
 
     # Patch sys.argv
-    sys.argv = (
-        [args.training_script]
-        + args.training_script_args
-        + ["--tpu_num_cores", str(args.num_cores)]
-    )
+    sys.argv = ([args.training_script] + args.training_script_args +
+                ["--tpu_num_cores", str(args.num_cores)])
 
     xmp.spawn(mod._mp_fn, args=(), nprocs=args.num_cores)
 
