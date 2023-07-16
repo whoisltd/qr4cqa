@@ -10,8 +10,8 @@ Install Pytorch in this [link](https://pytorch.org/get-started/previous-versions
 pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
 ```
 
-```
-pip install underthesea seqeval
+```bash
+pip install underthesea seqeval datasets sentencepiece
 ```
 
 # Install libraries

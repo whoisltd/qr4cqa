@@ -31,7 +31,8 @@ from transformers.trainer_utils import (
     EvalPrediction,
     get_last_checkpoint,
 )
-from features.dlkp.metrics.metrics import compute_kp_level_metrics
+
+from model.metrics import compute_kp_level_metrics
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
 # check_min_version("4.17.0.dev0")
