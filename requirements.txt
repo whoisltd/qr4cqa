@@ -34,7 +34,7 @@ seqeval==1.2.2
 six==1.16.0
 threadpoolctl==3.2.0
 tokenizers==0.13.3
-torch==1.12.1+cu113
+torch==1.13.1
 torchaudio==0.12.1+cu113
 torchvision==0.13.1+cu113
 tqdm==4.65.0
