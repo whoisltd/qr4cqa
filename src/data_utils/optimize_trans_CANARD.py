@@ -27,8 +27,7 @@ def main():
     results = Parallel(n_jobs=-1, prefer="threads")(delayed(translate_batch)(i) for i in tqdm(total_batch[:100]))
 
     final_result = []
-    for x in results:
-        final_result.extend(x)
+    for x in results: final_result.extend(x)
 
     with open(args.file_name_save, 'w', encoding='utf8') as f:
         json.dump(final_result, f)
@@ -64,7 +63,7 @@ def translate_batch(data):
             total_result.append(dict_)
         else:
             dict_['History'] = total_result[-1]['History'] + [translator.translate(data[idx]['History'][-1], dest='vi').text]
-            dict_['QuAC_dialog_id'] = data[0]['QuAC_dialog_id']
+            dict_['QuAC_dialog_id'] = data[idx]['QuAC_dialog_id']
             dict_['Question_no'] = data[idx]['Question_no']
             dict_['Question'] = translator.translate(data[idx]['Question'], dest='vi').text
             dict_['Rewrite'] = translator.translate(data[idx]['Rewrite'], dest='vi').text
