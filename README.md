@@ -1,8 +1,33 @@
-# Impliment Question Rewriting for Conversational Question Answering
+# Question Rewriting for Conversational Question Answering
 
 [VietAI Reseach]
 
-Impliment Question Rewriting for Conversational Question Answering 
+Implement Question Rewriting for Conversational Question Answering 
+
+# For Development
+
+Support Python 3.8+
+
+Install virtualenv
+
+```bash
+pip install virtualenv
+```
+
+Create virtualenv
+
+```bash
+virtualenv -p python3.8 venv
+```
+
+Activate virtualenv
+
+```bash
+# for linux:
+source venv/bin/activate
+# for windows:
+venv\Scripts\activate
+```
 
 # Installation
 
