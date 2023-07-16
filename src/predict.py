@@ -13,8 +13,7 @@ torch.cuda.set_device(0)
 import pandas as pd
 
 model = AutoModelForSeq2SeqLM.from_pretrained("weights/address_v1_vit5_base")
-# device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-device = torch.device("cpu")
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model.to(device)
 tokenizer = AutoTokenizer.from_pretrained("weights/address_v1_vit5_base")
 model.eval()
