@@ -22,11 +22,10 @@ Inspired by https://github.com/pytorch/pytorch/blob/master/torch/distributed/lau
                arguments of your training script)
 
 """
-
-
 import importlib
 import sys
-from argparse import REMAINDER, ArgumentParser
+from argparse import ArgumentParser
+from argparse import REMAINDER
 from pathlib import Path
 
 import torch_xla.distributed.xla_multiprocessing as xmp
