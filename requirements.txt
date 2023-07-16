@@ -20,6 +20,6 @@ torchaudio==0.12.1+cu113
 torchvision==0.13.1+cu113
 underthesea
 seqeval
-datasets 
+datasets
 sentencepiece
 -e git+https://github.com/huggingface/transformers@d941f07a4e3bc7b61b7afbd25d6e2e8427fccc6d#egg=transformers
