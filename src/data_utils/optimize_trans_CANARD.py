@@ -26,8 +26,9 @@ def main():
 
     results = Parallel(n_jobs=-1, prefer="threads")(delayed(translate_batch)(i) for i in tqdm(total_batch[:100]))
 
-    final_result = []
-    for x in results: final_result.extend(x)
+    # final_result = []
+    # for x in results: final_result.extend(x)
+    final_result = combine_batch(results)
 
     with open(args.file_name_save, 'w', encoding='utf8') as f:
         json.dump(final_result, f)
@@ -69,6 +70,11 @@ def translate_batch(data):
             dict_['Rewrite'] = translator.translate(data[idx]['Rewrite'], dest='vi').text
             total_result.append(dict_)
     return total_result
+
+def combine_batches(results):
+    final_result = []
+    for x in results: final_result.extend(x)
+    return final_result
 
 if __name__ == "__main__":
     main()
