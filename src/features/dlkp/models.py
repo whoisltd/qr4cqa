@@ -1,0 +1,1 @@
+from .generation.generator import KeyphraseGenerator
