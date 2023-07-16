@@ -15,3 +15,11 @@ rfc3986==1.5.0
 sniffio==1.3.0
 tqdm==4.65.0
 joblib==1.3.1
+torch==1.12.1+cu113
+torchaudio==0.12.1+cu113
+torchvision==0.13.1+cu113
+underthesea
+seqeval
+datasets 
+sentencepiece
+-e git+https://github.com/huggingface/transformers@d941f07a4e3bc7b61b7afbd25d6e2e8427fccc6d#egg=transformers
