@@ -24,7 +24,7 @@ def main():
 
     total_batch = divide_batch(data)
 
-    results = Parallel(n_jobs=-1, prefer="threads")(delayed(translate_batch)(i) for i in tqdm(total_batch))
+    results = Parallel(n_jobs=-1, prefer="threads")(delayed(translate_batch)(i) for i in tqdm([total_batch[-1]]))
 
     # final_result = []
     # for x in results: final_result.extend(x)
@@ -44,7 +44,10 @@ def divide_batch(data):
             batch_same = data[start_idx:end_idx]
             total_batch.append(batch_same)
             start_idx = i
-            continue
+        if i == len(data) - 1:
+            end_idx = i + 1
+            batch_same = data[start_idx:end_idx]
+            total_batch.append(batch_same)
     return total_batch
 
 def translate_batch(data):
