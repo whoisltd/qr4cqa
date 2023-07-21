@@ -1,13 +1,33 @@
 import os
+import json
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
 if __name__ == '__main__':
-    df = pd.read_csv('data/Address.csv')
-    df['CustomerAddress'] = df['CustomerAddress'].str.lower()
-    print('max source length', df["CustomerAddress"].str.len().max())
-    df['areaFull'] = df['areaFull'].str.lower()
-    print('max target length', df["areaFull"].str.len().max())
-    train, test = train_test_split(df, test_size=0.2, stratify=df['provName'], random_state=42)
-    train.to_csv('data/train_v1.csv', index=False)
-    test.to_csv('data/test_v1.csv', index=False)
+    DATA_DIR = './datasets/CANARD_Release'
+    OUTPUT_DIR = './data'
+    
+    languages = ['en', 'vi']
+    
+    splits = ['train', 'dev', 'test']
+    
+    for language in languages:
+        for split in splits:
+            if language == 'en':
+                filepath = os.path.join(DATA_DIR, language, f'{split}.json')
+            else:
+                filepath = os.path.join(DATA_DIR, language, f'{split}_vi.json')
+            with open(filepath, 'r') as f:
+                data = json.load(f)
+            inputs = []
+            outputs = []
+            for dialog in data:
+                history = dialog['History']
+                question = dialog['Question']
+                rewriting = dialog['Rewrite']
+                input = ".".join(history) + "." + question
+                output = rewriting
+                inputs.append(input)
+                outputs.append(output)
+            df = pd.DataFrame({'input': inputs, 'output': outputs})
+            df.to_csv(f'{OUTPUT_DIR}/{language}_{split}.csv')
