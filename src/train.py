@@ -447,6 +447,7 @@ def main():
             "label_smoothing is enabled but the `prepare_decoder_input_ids_from_labels` method is not defined for"
             f"`{model.__class__.__name__}`. This will lead to loss being calculated twice and will take up more memory"
         )
+    rouge_ = load("rouge")
 
     def preprocess_function(examples):
         # remove pairs where at least one record is None
@@ -555,7 +556,7 @@ def main():
             clean_up_tokenization_spaces=True,
         )
 
-        return compute_kp_level_metrics(predictions, originals, do_stem = False)
+        return rouge_.compute(predictions = predictions, references = originals)
     
 #     def compute_metrics(eval_preds):
 #         preds, labels = eval_preds
