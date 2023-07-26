@@ -16,7 +16,8 @@ def config():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--file_text",
-        default="/home/pphuc/Coding/Project/qr4cqa/datasets/CANARD_Release/en/dev.json",
+        default=
+        "/home/pphuc/Coding/Project/qr4cqa/datasets/CANARD_Release/en/dev.json",
     )
     parser.add_argument("--file_name_save", default="dev_vi.json")
     args = parser.parse_args()
@@ -35,9 +36,9 @@ def main():
 
     total_batch = divide_batch(data)
 
-    results = Parallel(n_jobs=-1, prefer="threads")(
-        delayed(translate_batch_v2)(i) for i in tqdm(total_batch)
-    )
+    results = Parallel(n_jobs=-1,
+                       prefer="threads")(delayed(translate_batch_v2)(i)
+                                         for i in tqdm(total_batch))
 
     final_result = combine_batches(results)
 
@@ -117,32 +118,32 @@ def translate_batch_v2(data: List[dict]) -> List[dict]:
     temp_his_trans: dict = {
         data[-1]["History"][index]: value.strip()
         for index, value in enumerate(
-            re.split(pattern, translator.translate(history, dest="vi").text)
-        )
+            re.split(pattern,
+                     translator.translate(history, dest="vi").text))
     }
     temp_question: dict = {
         index: value.strip()
         for index, value in enumerate(
-            re.split(pattern, translator.translate(questions, dest="vi").text)
-        )
+            re.split(pattern,
+                     translator.translate(questions, dest="vi").text))
     }
     temp_rewrites: dict = {
         index: value.strip()
         for index, value in enumerate(
-            re.split(pattern, translator.translate(rewrites, dest="vi").text)
-        )
+            re.split(pattern,
+                     translator.translate(rewrites, dest="vi").text))
     }
 
     for idx in range(len(data)):
         dict_ = {}
-        dict_["History"] = [temp_his_trans[key] for key in data[idx]["History"]]
+        dict_["History"] = [
+            temp_his_trans[key] for key in data[idx]["History"]
+        ]
         dict_["QuAC_dialog_id"] = data[idx]["QuAC_dialog_id"]
         dict_["Question_no"] = data[idx]["Question_no"]
-        dict_["Question"] = (
-            temp_his_trans[data[idx]["Question"]]
-            if data[idx]["Question"] in temp_his_trans
-            else temp_question[idx]
-        )
+        dict_["Question"] = (temp_his_trans[data[idx]["Question"]]
+                             if data[idx]["Question"] in temp_his_trans else
+                             temp_question[idx])
         dict_["Rewrite"] = temp_rewrites[idx]
         total_result.append(dict_)
     return total_result
