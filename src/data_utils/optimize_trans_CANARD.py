@@ -1,13 +1,12 @@
 # convert json file to csv file
+import argparse
 import json
 import re
-from tqdm import tqdm
-import argparse
+from typing import List
 
 from googletrans import Translator
 from joblib import Parallel, delayed
-
-from typing import List
+from tqdm import tqdm
 
 pattern = r"<[^>]*>"
 
