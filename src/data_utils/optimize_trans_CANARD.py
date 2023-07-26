@@ -11,12 +11,15 @@ from typing import List
 
 pattern = r'<[^>]*>'
 
+
 def config():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--file_text', default="/home/pphuc/Coding/Project/qr4cqa/datasets/CANARD_Release/en/dev.json")
+    parser.add_argument(
+        '--file_text', default="/home/pphuc/Coding/Project/qr4cqa/datasets/CANARD_Release/en/dev.json")
     parser.add_argument('--file_name_save', default='dev_vi.json')
     args = parser.parse_args()
     return args
+
 
 def main():
     args = config()
@@ -30,18 +33,20 @@ def main():
 
     total_batch = divide_batch(data)
 
-    results = Parallel(n_jobs=-1, prefer="threads")(delayed(translate_batch_v2)(i) for i in tqdm(total_batch))
+    results = Parallel(n_jobs=-1, prefer="threads")(delayed(translate_batch_v2)(i)
+                                                    for i in tqdm(total_batch))
 
     final_result = combine_batches(results)
 
     with open(args.file_name_save, 'w', encoding='utf-8') as f:
         json.dump(final_result, f, ensure_ascii=False)
 
+
 def divide_batch(data: List[dict]) -> List[list]:
     """
     Divide a whole data into each batch according to QuAC_dialog_id,
     in which a batch is a full conversation
-    
+
     Args:
         data: the whole data containing multiple conversation
 
@@ -79,6 +84,7 @@ def divide_batch(data: List[dict]) -> List[list]:
 #         total_result.append(dict_)
 #     return total_result
 
+
 def translate_batch_v2(data: List[dict]) -> List[dict]:
     """
     Translate history, questions, rewrites into vietnamese by translate in
@@ -95,28 +101,34 @@ def translate_batch_v2(data: List[dict]) -> List[dict]:
     Returns:
         List(list): Translated conversation
     """
-    translator = Translator(service_urls = ["translate.googleapis.com"])
+    translator = Translator(service_urls=["translate.googleapis.com"])
     total_result = []
     questions_list = [value['Question'] for value in data]
     rewrites_list = [value['Rewrite'] for value in data]
-    
+
     questions = '   <%%|$|%%>   '.join(questions_list)
     history = '   <%%|$|%%>   '.join(data[-1]['History'])
     rewrites = '   <%%|$|%%>   '.join(rewrites_list)
 
-    temp_his_trans: dict = {data[-1]['History'][index]: value.strip() for index, value in enumerate(re.split(pattern, translator.translate(history, dest='vi').text))}
-    temp_question: dict = {index: value.strip() for index, value in enumerate(re.split(pattern, translator.translate(questions, dest='vi').text))}
-    temp_rewrites: dict = {index: value.strip() for index, value in enumerate(re.split(pattern, translator.translate(rewrites, dest='vi').text))}
+    temp_his_trans: dict = {data[-1]['History'][index]: value.strip() for index, value in enumerate(
+        re.split(pattern, translator.translate(history, dest='vi').text))}
+    temp_question: dict = {index: value.strip() for index, value in enumerate(
+        re.split(pattern, translator.translate(questions, dest='vi').text))}
+    temp_rewrites: dict = {index: value.strip() for index, value in enumerate(
+        re.split(pattern, translator.translate(rewrites, dest='vi').text))}
 
     for idx in range(len(data)):
         dict_ = {}
-        dict_['History'] = [temp_his_trans[key] for key in data[idx]['History']]
+        dict_['History'] = [temp_his_trans[key]
+                            for key in data[idx]['History']]
         dict_['QuAC_dialog_id'] = data[idx]['QuAC_dialog_id']
         dict_['Question_no'] = data[idx]['Question_no']
-        dict_['Question'] = temp_his_trans[data[idx]['Question']] if data[idx]['Question'] in temp_his_trans else temp_question[idx]
+        dict_['Question'] = temp_his_trans[data[idx]['Question']
+                                           ] if data[idx]['Question'] in temp_his_trans else temp_question[idx]
         dict_['Rewrite'] = temp_rewrites[idx]
         total_result.append(dict_)
     return total_result
+
 
 def combine_batches(results: List[list]) -> list:
     """
@@ -124,13 +136,15 @@ def combine_batches(results: List[list]) -> list:
 
     Args:
         results: A List contain multiple list of after preprocess
-    
+
     Return:
         (list): A single list
     """
     final_result = []
-    for x in results: final_result.extend(x)
+    for x in results:
+        final_result.extend(x)
     return final_result
+
 
 if __name__ == "__main__":
     main()
