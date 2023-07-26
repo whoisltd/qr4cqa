@@ -5,7 +5,8 @@ import re
 from typing import List
 
 from googletrans import Translator
-from joblib import Parallel, delayed
+from joblib import delayed
+from joblib import Parallel
 from tqdm import tqdm
 
 pattern = r"<[^>]*>"
