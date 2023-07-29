@@ -1,0 +1,191 @@
+[    {
+    "History": [
+        "Stewart Copeland",
+        "Solo projects and movie soundtracks (1987-1998)"
+    ],
+    "QuAC_dialog_id": "C_59773acc2ace44b3a9056161d5aa2baf_0",
+    "Question": "Did Copeland release any solo albums?",
+    "Question_no": 1,
+    "Rewrite": "Did Stewart Copeland release any solo albums?"
+},
+{
+    "History": [
+        "Stewart Copeland",
+        "Solo projects and movie soundtracks (1987-1998)",
+        "Did Copeland release any solo albums?",
+        "I don't know."
+    ],
+    "QuAC_dialog_id": "C_59773acc2ace44b3a9056161d5aa2baf_0",
+    "Question": "What movie soundtracks did Copeland perform on?",
+    "Question_no": 2,
+    "Rewrite": "What movie soundtracks did Stewart Copeland perform on?"
+},
+{
+    "History": [
+        "Stewart Copeland",
+        "Solo projects and movie soundtracks (1987-1998)",
+        "Did Copeland release any solo albums?",
+        "I don't know.",
+        "What movie soundtracks did Copeland perform on?",
+        "Copeland established a career composing soundtracks for movies ("
+    ],
+    "QuAC_dialog_id": "C_59773acc2ace44b3a9056161d5aa2baf_0",
+    "Question": "What movie soundtracks did Copeland compose?",
+    "Question_no": 3,
+    "Rewrite": "What movie soundtracks did Stewart Copeland compose?"
+},
+{
+    "History": [
+        "Stewart Copeland",
+        "Solo projects and movie soundtracks (1987-1998)",
+        "Did Copeland release any solo albums?",
+        "I don't know.",
+        "What movie soundtracks did Copeland perform on?",
+        "Copeland established a career composing soundtracks for movies (",
+        "What movie soundtracks did Copeland compose?",
+        "Airborne, Talk Radio, Wall Street, Riff Raff, Raining Stones, Surviving the Game, See No Evil, Hear No Evil, Highlander II:"
+    ],
+    "QuAC_dialog_id": "C_59773acc2ace44b3a9056161d5aa2baf_0",
+    "Question": "Were there other movies?",
+    "Question_no": 4,
+    "Rewrite": "Besides Airborne, Wall Street, and Highlander II, were there other movie soundtracks that Stewart Copeland composed?"
+},
+{
+    "History": [
+        "Stewart Copeland",
+        "Solo projects and movie soundtracks (1987-1998)",
+        "Did Copeland release any solo albums?",
+        "I don't know.",
+        "What movie soundtracks did Copeland perform on?",
+        "Copeland established a career composing soundtracks for movies (",
+        "What movie soundtracks did Copeland compose?",
+        "Airborne, Talk Radio, Wall Street, Riff Raff, Raining Stones, Surviving the Game, See No Evil, Hear No Evil, Highlander II:",
+        "Were there other movies?",
+        "The Leopard Son, She's Having a Baby, The First Power, Fresh, Taking Care of Business, West Beirut, I am David, Good Burger),"
+    ],
+    "QuAC_dialog_id": "C_59773acc2ace44b3a9056161d5aa2baf_0",
+    "Question": "Did Copeland compose anything else?",
+    "Question_no": 5,
+    "Rewrite": "Besides movie soundtracks, did Stewart Copeland compose anything else?"
+},
+{
+    "History": [
+        "Stewart Copeland",
+        "Solo projects and movie soundtracks (1987-1998)",
+        "Did Copeland release any solo albums?",
+        "I don't know.",
+        "What movie soundtracks did Copeland perform on?",
+        "Copeland established a career composing soundtracks for movies (",
+        "What movie soundtracks did Copeland compose?",
+        "Airborne, Talk Radio, Wall Street, Riff Raff, Raining Stones, Surviving the Game, See No Evil, Hear No Evil, Highlander II:",
+        "Were there other movies?",
+        "The Leopard Son, She's Having a Baby, The First Power, Fresh, Taking Care of Business, West Beirut, I am David, Good Burger),",
+        "Did Copeland compose anything else?",
+        "television (The Equalizer, Dead Like Me, Star Wars: Droids, the pilot for Babylon 5 (1993), Nickelodeon's The Amanda Show, The Life and Times of Juniper Lee"
+    ],
+    "QuAC_dialog_id": "C_59773acc2ace44b3a9056161d5aa2baf_0",
+    "Question": "Did he compose for anything besides movies and TV?",
+    "Question_no": 6,
+    "Rewrite": "Did Stewart Copeland compose for anything besides movies and TV?"
+},
+{
+    "History": [
+        "Stewart Copeland",
+        "Solo projects and movie soundtracks (1987-1998)",
+        "Did Copeland release any solo albums?",
+        "I don't know.",
+        "What movie soundtracks did Copeland perform on?",
+        "Copeland established a career composing soundtracks for movies (",
+        "What movie soundtracks did Copeland compose?",
+        "Airborne, Talk Radio, Wall Street, Riff Raff, Raining Stones, Surviving the Game, See No Evil, Hear No Evil, Highlander II:",
+        "Were there other movies?",
+        "The Leopard Son, She's Having a Baby, The First Power, Fresh, Taking Care of Business, West Beirut, I am David, Good Burger),",
+        "Did Copeland compose anything else?",
+        "television (The Equalizer, Dead Like Me, Star Wars: Droids, the pilot for Babylon 5 (1993), Nickelodeon's The Amanda Show, The Life and Times of Juniper Lee",
+        "Did he compose for anything besides movies and TV?",
+        "operas (Holy Blood and Crescent Moon, commissioned by Cleveland Opera) and ballets ("
+    ],
+    "QuAC_dialog_id": "C_59773acc2ace44b3a9056161d5aa2baf_0",
+    "Question": "What ballets did he compose?",
+    "Question_no": 7,
+    "Rewrite": "What ballets did Stewart Copeland compose?"
+},
+{
+    "History": [
+        "Stewart Copeland",
+        "Solo projects and movie soundtracks (1987-1998)",
+        "Did Copeland release any solo albums?",
+        "I don't know.",
+        "What movie soundtracks did Copeland perform on?",
+        "Copeland established a career composing soundtracks for movies (",
+        "What movie soundtracks did Copeland compose?",
+        "Airborne, Talk Radio, Wall Street, Riff Raff, Raining Stones, Surviving the Game, See No Evil, Hear No Evil, Highlander II:",
+        "Were there other movies?",
+        "The Leopard Son, She's Having a Baby, The First Power, Fresh, Taking Care of Business, West Beirut, I am David, Good Burger),",
+        "Did Copeland compose anything else?",
+        "television (The Equalizer, Dead Like Me, Star Wars: Droids, the pilot for Babylon 5 (1993), Nickelodeon's The Amanda Show, The Life and Times of Juniper Lee",
+        "Did he compose for anything besides movies and TV?",
+        "operas (Holy Blood and Crescent Moon, commissioned by Cleveland Opera) and ballets (",
+        "What ballets did he compose?",
+        "Prey' Ballet Oklahoma, Casque of Amontillado, Noah's Ark/Solcheeka, commissioned by the Seattle Symphony Orchestra, King Lear,"
+    ],
+    "QuAC_dialog_id": "C_59773acc2ace44b3a9056161d5aa2baf_0",
+    "Question": "Did he perform with any bands besides The Police?",
+    "Question_no": 8,
+    "Rewrite": "Did Stewart Copeland perform with any bands besides The Police?"
+},
+{
+    "History": [
+        "Stewart Copeland",
+        "Solo projects and movie soundtracks (1987-1998)",
+        "Did Copeland release any solo albums?",
+        "I don't know.",
+        "What movie soundtracks did Copeland perform on?",
+        "Copeland established a career composing soundtracks for movies (",
+        "What movie soundtracks did Copeland compose?",
+        "Airborne, Talk Radio, Wall Street, Riff Raff, Raining Stones, Surviving the Game, See No Evil, Hear No Evil, Highlander II:",
+        "Were there other movies?",
+        "The Leopard Son, She's Having a Baby, The First Power, Fresh, Taking Care of Business, West Beirut, I am David, Good Burger),",
+        "Did Copeland compose anything else?",
+        "television (The Equalizer, Dead Like Me, Star Wars: Droids, the pilot for Babylon 5 (1993), Nickelodeon's The Amanda Show, The Life and Times of Juniper Lee",
+        "Did he compose for anything besides movies and TV?",
+        "operas (Holy Blood and Crescent Moon, commissioned by Cleveland Opera) and ballets (",
+        "What ballets did he compose?",
+        "Prey' Ballet Oklahoma, Casque of Amontillado, Noah's Ark/Solcheeka, commissioned by the Seattle Symphony Orchestra, King Lear,",
+        "Did he perform with any bands besides The Police?",
+        "Peter Gabriel employed Copeland to perform on his songs \"Red Rain\" and \"Big Time\""
+    ],
+    "QuAC_dialog_id": "C_59773acc2ace44b3a9056161d5aa2baf_0",
+    "Question": "When did he work with Peter Gabriel?",
+    "Question_no": 9,
+    "Rewrite": "When did Stewart Copeland work with Peter Gabriel?"
+},
+{
+    "History": [
+        "Stewart Copeland",
+        "Solo projects and movie soundtracks (1987-1998)",
+        "Did Copeland release any solo albums?",
+        "I don't know.",
+        "What movie soundtracks did Copeland perform on?",
+        "Copeland established a career composing soundtracks for movies (",
+        "What movie soundtracks did Copeland compose?",
+        "Airborne, Talk Radio, Wall Street, Riff Raff, Raining Stones, Surviving the Game, See No Evil, Hear No Evil, Highlander II:",
+        "Were there other movies?",
+        "The Leopard Son, She's Having a Baby, The First Power, Fresh, Taking Care of Business, West Beirut, I am David, Good Burger),",
+        "Did Copeland compose anything else?",
+        "television (The Equalizer, Dead Like Me, Star Wars: Droids, the pilot for Babylon 5 (1993), Nickelodeon's The Amanda Show, The Life and Times of Juniper Lee",
+        "Did he compose for anything besides movies and TV?",
+        "operas (Holy Blood and Crescent Moon, commissioned by Cleveland Opera) and ballets (",
+        "What ballets did he compose?",
+        "Prey' Ballet Oklahoma, Casque of Amontillado, Noah's Ark/Solcheeka, commissioned by the Seattle Symphony Orchestra, King Lear,",
+        "Did he perform with any bands besides The Police?",
+        "Peter Gabriel employed Copeland to perform on his songs \"Red Rain\" and \"Big Time\"",
+        "When did he work with Peter Gabriel?",
+        "1986"
+    ],
+    "QuAC_dialog_id": "C_59773acc2ace44b3a9056161d5aa2baf_0",
+    "Question": "What other artists did he work with?",
+    "Question_no": 10,
+    "Rewrite": "Besides Peter Gabriel, what other artists did Stewart Copeland work with?"
+}
+]

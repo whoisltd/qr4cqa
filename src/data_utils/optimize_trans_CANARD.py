@@ -9,7 +9,7 @@ from joblib import delayed
 from joblib import Parallel
 from tqdm import tqdm
 
-pattern = r"<[^>]*>"
+pattern = r"\n"
 
 
 def config():
@@ -111,9 +111,9 @@ def translate_batch_v2(data: List[dict]) -> List[dict]:
     questions_list = [value["Question"] for value in data]
     rewrites_list = [value["Rewrite"] for value in data]
 
-    questions = "   <%%|$|%%>   ".join(questions_list)
-    history = "   <%%|$|%%>   ".join(data[-1]["History"])
-    rewrites = "   <%%|$|%%>   ".join(rewrites_list)
+    questions = "\n".join(questions_list)
+    history = "\n".join(data[-1]["History"])
+    rewrites = "\n".join(rewrites_list)
 
     temp_his_trans: dict = {
         data[-1]["History"][index]: value.strip()
