@@ -7,7 +7,7 @@ if __name__ == '__main__':
     DATA_DIR = './datasets/CANARD_Release'
     OUTPUT_DIR = './data'
     
-    languages = ['en', 'vi']
+    languages = ['en', 'vi_v1', 'vi_v2']
     
     splits = ['train', 'dev', 'test']
     
